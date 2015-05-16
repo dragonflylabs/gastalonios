@@ -1,0 +1,150 @@
+
+/* Class = "UISegmentedControl"; 0DC-SB-T2s.segmentTitles[0] = "Accounts"; ObjectID = "0DC-SB-T2s"; */
+"0DC-SB-T2s.segmentTitles[0]" = "Cuentas";
+
+/* Class = "UISegmentedControl"; 0DC-SB-T2s.segmentTitles[1] = "Shared Accounts"; ObjectID = "0DC-SB-T2s"; */
+"0DC-SB-T2s.segmentTitles[1]" = "Cuentas compartidas";
+
+/* Class = "UILabel"; text = "$ 13,000.00"; ObjectID = "0Or-TQ-KAr"; */
+"0Or-TQ-KAr.text" = "$ 13,000.00";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "1Hr-Dk-Fwb"; */
+"1Hr-Dk-Fwb.placeholder" = "Correo electrónico";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "2gk-t7-bqf"; */
+"2gk-t7-bqf.placeholder" = "Contraseña";
+
+/* Class = "UINavigationItem"; title = "Add Account"; ObjectID = "4b6-sJ-06l"; */
+"4b6-sJ-06l.title" = "Agregar cuenta";
+
+/* Class = "UILabel"; text = "0.00"; ObjectID = "66x-hr-DxY"; */
+"66x-hr-DxY.text" = "0.00";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "6Pr-LV-6mk"; */
+"6Pr-LV-6mk.title" = "Inicio";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "6nK-8h-u9E"; */
+"6nK-8h-u9E.text" = "Registrar";
+
+/* Class = "UILabel"; text = "Terms and Conditions"; ObjectID = "7X4-dd-iEI"; */
+"7X4-dd-iEI.text" = "Términos y Condiciones";
+
+/* Class = "UILabel"; text = "Casa"; ObjectID = "9iw-ha-kgH"; */
+"9iw-ha-kgH.text" = "Casa";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "Cxn-PA-Duq"; */
+"Cxn-PA-Duq.title" = "Configuración";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "DVY-jU-KUd"; */
+"DVY-jU-KUd.text" = "Hace un minuto";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "Du4-cN-2TH"; */
+"Du4-cN-2TH.text" = "Hace un minuto";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "Eil-0W-pwv"; */
+"Eil-0W-pwv.title" = "Listo";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Han-g0-YK2"; */
+"Han-g0-YK2.title" = "Cancelar";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "JVl-np-XyM"; */
+"JVl-np-XyM.title" = "Registrar";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "KWu-ve-lCs"; */
+"KWu-ve-lCs.text" = "Hace un minuto";
+
+/* Class = "UINavigationItem"; title = "Accounts"; ObjectID = "PYD-Nz-V0e"; */
+"PYD-Nz-V0e.title" = "Cuentas";
+
+/* Class = "UILabel"; text = "Forgot Password?"; ObjectID = "PZo-ha-dLu"; */
+"PZo-ha-dLu.text" = "¿Olvidaste tu contraseña?";
+
+/* Class = "UITabBarItem"; title = "Accounts"; ObjectID = "QTg-sE-FMG"; */
+"QTg-sE-FMG.title" = "Cuentas";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "Qix-iL-iQK"; */
+"Qix-iL-iQK.text" = "Gastos";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "UkG-5u-seo"; */
+"UkG-5u-seo.text" = "Hace un minuto";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Vy1-hc-Fv2"; */
+"Vy1-hc-Fv2.title" = "Configuración";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "Yq2-es-SD6"; */
+"Yq2-es-SD6.title" = "Inicio";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "Zz2-eA-OHF"; */
+"Zz2-eA-OHF.text" = "Hace un minuto";
+
+/* Class = "UILabel"; text = "$23.60"; ObjectID = "ab2-21-k4F"; */
+"ab2-21-k4F.text" = "$23.60";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "aqY-40-h0p"; */
+"aqY-40-h0p.text" = "Hace un minuto";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "bCW-4g-GBD"; */
+"bCW-4g-GBD.text" = "Hace un minuto";
+
+/* Class = "UINavigationItem"; title = "Calendar"; ObjectID = "cmb-j4-RxA"; */
+"cmb-j4-RxA.title" = "Calendario";
+
+/* Class = "UITabBarItem"; title = "Calendar"; ObjectID = "cmq-mo-pt4"; */
+"cmq-mo-pt4.title" = "Calendario";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "dAx-Vx-07D"; */
+"dAx-Vx-07D.text" = "Hace un minuto";
+
+/* Class = "UILabel"; text = "Incomes"; ObjectID = "dnm-7k-y6f"; */
+"dnm-7k-y6f.text" = "Ingresos";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "efb-bX-PHM"; */
+"efb-bX-PHM.text" = "Hace un minuto";
+
+/* Class = "UITabBarItem"; title = "Charts"; ObjectID = "fJE-Ze-R0E"; */
+"fJE-Ze-R0E.title" = "Gráficas";
+
+/* Class = "UILabel"; text = "$"; ObjectID = "fmh-cz-ekS"; */
+"fmh-cz-ekS.text" = "$";
+
+/* Class = "UITextField"; placeholder = "0.00"; ObjectID = "gs8-GJ-AZK"; */
+"gs8-GJ-AZK.placeholder" = "0.00";
+
+/* Class = "UITextField"; text = "Home Account"; ObjectID = "gs8-GJ-AZK"; */
+"gs8-GJ-AZK.text" = "Casa";
+
+/* Class = "UILabel"; text = "Balance"; ObjectID = "hFG-Os-HFn"; */
+"hFG-Os-HFn.text" = "Disponible";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "hVZ-MO-m2Q"; */
+"hVZ-MO-m2Q.text" = "Hace un minuto";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "hfp-B3-1hx"; */
+"hfp-B3-1hx.text" = "Hace un minuto";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "iBa-qE-PRg"; */
+"iBa-qE-PRg.placeholder" = "Correo electrónico";
+
+/* Class = "UITextField"; placeholder = "Full name"; ObjectID = "iL4-D4-AGF"; */
+"iL4-D4-AGF.placeholder" = "Nombre completo";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "jR1-db-nXf"; */
+"jR1-db-nXf.text" = "Hace un minuto";
+
+/* Class = "UINavigationItem"; title = "Charts"; ObjectID = "mn3-eY-gN3"; */
+"mn3-eY-gN3.title" = "Gráficas";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "t3r-0z-Bec"; */
+"t3r-0z-Bec.text" = "Hace un minuto";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "tHb-uo-gse"; */
+"tHb-uo-gse.placeholder" = "Contraseña";
+
+/* Class = "UILabel"; text = "$12,560.50"; ObjectID = "uKe-s7-khe"; */
+"uKe-s7-khe.text" = "$12,560.50";
+
+/* Class = "UILabel"; text = "A minute ago"; ObjectID = "xl4-Ob-Eev"; */
+"xl4-Ob-Eev.text" = "Hace un minuto";
+
+/* Class = "UINavigationItem"; title = "Add Transaction"; ObjectID = "ybm-ZP-1ii"; */
+"ybm-ZP-1ii.title" = "Agregar transacción";

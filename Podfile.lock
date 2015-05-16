@@ -1,0 +1,133 @@
+PODS:
+  - AFNetworking (2.5.3):
+    - AFNetworking/NSURLConnection (= 2.5.3)
+    - AFNetworking/NSURLSession (= 2.5.3)
+    - AFNetworking/Reachability (= 2.5.3)
+    - AFNetworking/Security (= 2.5.3)
+    - AFNetworking/Serialization (= 2.5.3)
+    - AFNetworking/UIKit (= 2.5.3)
+  - AFNetworking/NSURLConnection (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.3)
+  - AFNetworking/Security (2.5.3)
+  - AFNetworking/Serialization (2.5.3)
+  - AFNetworking/UIKit (2.5.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Bolts (1.1.4)
+  - CCMPopup (1.1.0)
+  - CNPPopupController (0.1.2)
+  - DLSuit (0.0.3):
+    - AFNetworking
+    - TSMessages
+  - EAIntroView (2.7.0):
+    - EARestrictedScrollView (~> 0.1.0)
+  - EARestrictedScrollView (0.1.0)
+  - Facebook-iOS-SDK (4.0):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit (= 4.0)
+    - Facebook-iOS-SDK/LoginKit (= 4.0)
+    - Facebook-iOS-SDK/ShareKit (= 4.0)
+  - Facebook-iOS-SDK/CoreKit (4.0):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit/no-arc (= 4.0)
+  - Facebook-iOS-SDK/CoreKit/no-arc (4.0):
+    - Bolts (~> 1.0)
+  - Facebook-iOS-SDK/LoginKit (4.0):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.0):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - FCVerticalMenu (0.1.3)
+  - FSCalendar (0.5.2)
+  - HexColors (2.2.1)
+  - MRProgress (0.8.1):
+    - MRProgress/ActivityIndicator (= 0.8.1)
+    - MRProgress/Blur (= 0.8.1)
+    - MRProgress/Circular (= 0.8.1)
+    - MRProgress/Icons (= 0.8.1)
+    - MRProgress/NavigationBarProgress (= 0.8.1)
+    - MRProgress/Overlay (= 0.8.1)
+  - MRProgress/ActivityIndicator (0.8.1):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.8.1):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.8.1):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.8.1)
+  - MRProgress/Icons (0.8.1)
+  - MRProgress/NavigationBarProgress (0.8.1):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.8.1):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.8.1)
+  - MRProgress/Stopable (0.8.1):
+    - MRProgress/Helper
+  - NSDate+TimeAgo (1.0.3)
+  - Realm (0.90.6):
+    - Realm/Headers (= 0.90.6)
+  - Realm/Headers (0.90.6)
+  - RKDropdownAlert (0.3.0)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - SMPageControl (1.2)
+  - TSMessages (0.9.12):
+    - HexColors
+  - TTTAttributedLabel (1.13.3)
+  - UITextField+Shake (1.0)
+
+DEPENDENCIES:
+  - CCMPopup
+  - CNPPopupController
+  - DLSuit
+  - EAIntroView (~> 2.7.0)
+  - Facebook-iOS-SDK
+  - FCVerticalMenu
+  - FSCalendar
+  - MRProgress
+  - NSDate+TimeAgo
+  - Realm
+  - Realm/Headers
+  - RKDropdownAlert
+  - SDWebImage (~> 3.7)
+  - SMPageControl (~> 1.2)
+  - TTTAttributedLabel
+  - UITextField+Shake
+
+SPEC CHECKSUMS:
+  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
+  CNPPopupController: 8ce4ccd90287320aaa716c7c06caabda31b844ed
+  DLSuit: 33c708b67d87e779233973cdcbd8cd2ec703b1d3
+  EAIntroView: 9becdb1441712405346a3e6bc31b0d9a57b63b10
+  EARestrictedScrollView: 5ab3eadd9ea55282cc72df0daecb09803059e3a0
+  Facebook-iOS-SDK: 523ee69fdd3c37cdca6578c79912f47943035806
+  FCVerticalMenu: 1f9d11018d78fdb5eac858fb13b7fc60d09a03ee
+  FSCalendar: d6371907c526006c5c69a2ed94f2403ca30af531
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  MRProgress: 72653f3ffd13c7bbac8c9de1da9bf0249fc2717d
+  NSDate+TimeAgo: 416f55d2696d3744c313091c5a9280d47f8238fe
+  Realm: a4b2766a29006293693a0f26664ecb5a84a54455
+  RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
+  TSMessages: 2a52642128d7ab15b46930c810b9c9403a2b58f3
+  TTTAttributedLabel: 6f3174aef8e738f44dff97c2eb7d8184f6ab6277
+  UITextField+Shake: 61fe6ff0cdbf667618d1e856022940aa7798c3f0
+
+COCOAPODS: 0.37.1

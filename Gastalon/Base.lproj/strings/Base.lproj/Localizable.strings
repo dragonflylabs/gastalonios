@@ -1,0 +1,54 @@
+/* 
+  File.strings
+  Gastalon
+
+  Created by Daniel García Alvarado on 4/11/15.
+  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
+*/
+// Transaction texts
+"TRANSACTION_ADD_ACCOUNT" = "You have created %@ account with an initial balance of $%.02f";
+"TRANSACTION_ADD_SHARED_ACCOUNT" = "You have created %@ shared account with an initial balance of $%.02f";
+"TRANSACTION_ALARM_PAY" = "You must pay $%.02f for %@ before %@ in the %@ account.";
+"TRANSACTION_ALARM_PAY_GROUPAL" = "You must pay $%.02f for %@ before %@ in the %@ shared account.";
+"TRANSACTION_DID_YOU_GET_GROUP" = "Alredy you charged %.02f per %@ in %@ shared account?";
+"TRANSACTION_DID_YOU_GET_THE_MONEY" = "Alredy you charged %.02f per %@ in %@ account?";
+"TRANSACTION_FRIEND_ADDED_YOU_TO_ACCOUNT" = "";
+"TRANSACTION_FRIEND_GAIN_MONEY" = "";
+"TRANSACTION_FRIEND_SPENT_MONEY" = "";
+"TRANSACTION_YOU_ADDED_FRIEND_TO_ACCOUNT" = "";
+"TRANSACTION_YOU_ADDED_FRIENDS_TO_ACCOUNT" = "";
+"TRANSACTION_YOU_HAS_GAINED_IN_SHARED" = "";
+"TRANSACTION_YOU_HAS_GAINED_MONEY" = "";
+"TRANSACTION_YOU_HAS_SPENT" = "";
+
+// Frecuency text
+"FRECUENCY_DAILY" = "Daily";
+"FRECUENCY_WEEKLY" = "Weekly";
+"FRECUENCY_EVERY_TWO_WEEKS" = "Every two weeks";
+"FRECUENCY_MONTHLY" = "Monthly";
+"FRECUENCY_BIMONTHLY" = "Bimonthly";
+"FRECUENCY_EACH_THREE_MONTHS" = "Each three months";
+"FRECUENCY_SIXTLY" = "Sixtly";
+"FRECUENCY_EACH_YEAR" = "Each year";
+
+//Button' Text
+"Image_Source" = "Select where to taking the image";
+"Camera_Source" = "Camera";
+"Gallery_Source" = "Gallery";
+"Cancel" = "Cancel";
+"Last_Update" = "Last update";
+
+//Error Text
+"Error_Connection" = "Seems like you haven't Internet.";
+"Error_Credentials" = "Credentials incorrect.";
+"Error_404" = "Someting happen, try later!";
+"Session_Expired" = "The session has expired, please try again.";
+"Error_Facebook_Me_Request" = "Couldn't fetch user information";
+"Error_Twitter_Me_Request" = "Couldn't fetch user information";
+
+//Common Text
+"Accept" = "Accept";
+
+
+"Confirm_Email" = "Please confirm your email before continue";
+"User_Exists" = "Username alredy exists.";
