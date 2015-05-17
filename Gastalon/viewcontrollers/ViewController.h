@@ -37,6 +37,6 @@
 -(void) unregisterForKeyboardNotificatons;
 -(void) registerForKeyboardNotifications;
 
--(BOOL)validHTTPStatus:(NSError*)error;
+-(BOOL)validHTTPStatus:(int)error;
 @end
 

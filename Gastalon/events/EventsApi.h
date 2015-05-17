@@ -2,7 +2,7 @@
 //  EventsApi.h
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 3/29/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -44,6 +44,7 @@
 @property(nonatomic, strong) NSString * email;
 @property(nonatomic, strong) NSString * urlImage;
 @property(nonatomic, strong) NSString * facebookID;
+@property(nonatomic, strong) NSString * facebookToken;
 @end
 
 @interface EventLoginTwitter : NSObject
@@ -52,6 +53,7 @@
 @property(nonatomic, strong) NSString * email;
 @property(nonatomic, strong) NSString * urlImage;
 @property(nonatomic, strong) NSString * twitterID;
+
 @end
 
 @interface EventFacebookPictureDownloaded : NSObject
@@ -63,4 +65,12 @@
 @interface EventTypedNumber : NSObject
 @property (nonatomic, assign) BOOL isCleaning;
 @property (nonatomic, strong) NSString * number;
+@end
+
+@interface EventTokenReceived : NSObject
+@end
+
+@interface EventFacebookFriends : NSObject
+@property(nonatomic, strong) NSError * error;
+@property(nonatomic, strong) NSMutableArray * friends;
 @end

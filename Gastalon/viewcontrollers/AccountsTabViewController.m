@@ -58,7 +58,7 @@
     if(!isSharedAccount){
         [self showModalControllerWithIdentifier:@"ADDACCOUNTCONTROLLER"];
     }else{
-        [self showModalControllerWithIdentifier:@"ADDSHAREDACCOUNTCONTROLLER"];
+        [self showModalControllerWithIdentifier:@"ADDSHAREDACCOUNTNAVIGATIONCONTROLLER"];
     }
 }
 

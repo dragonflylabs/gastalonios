@@ -2,7 +2,7 @@
 //  EventsApi.m
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 3/29/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -42,4 +42,10 @@
 @end
 
 @implementation EventTypedNumber
+@end
+
+@implementation EventTokenReceived
+@end
+
+@implementation EventFacebookFriends
 @end

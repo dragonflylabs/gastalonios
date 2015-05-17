@@ -45,10 +45,11 @@
 "Session_Expired" = "The session has expired, please try again.";
 "Error_Facebook_Me_Request" = "Couldn't fetch user information";
 "Error_Twitter_Me_Request" = "Couldn't fetch user information";
-
+"Server_Error" = "Server error (500)";
 //Common Text
 "Accept" = "Accept";
 
 
 "Confirm_Email" = "Please confirm your email before continue";
 "User_Exists" = "Username alredy exists.";
+"User_Not_Exists" = "Username doesn't exists";

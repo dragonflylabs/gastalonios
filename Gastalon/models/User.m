@@ -2,7 +2,7 @@
 //  User.m
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 5/5/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -20,9 +20,10 @@
         self.facebookID = @"";
         self.token = @"";
         self.deviceToken = @"";
-        self.deviceType = [NSString stringWithFormat:@"%d", 1];
+        self.deviceType = [NSString stringWithFormat:@"%d", 2];
         self.imei = @"";
         self.profileImage = @"";
+        self.facebookToken = @"";
     }
     return self;
 }

@@ -2,7 +2,7 @@
 //  Validators.h
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 5/3/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 +(BOOL)validDecimal:(NSString*)text;
 +(BOOL)validPassword:(NSString*)text;
 +(BOOL)validEmail:(NSString*)text;
++(NSString*)notNull:(NSString*)text;
 +(NSString*)numberCurrencyFormatter:(double)amount;
 +(BOOL)matches:(NSCharacterSet*)set andText:(NSString*)text;
 @end

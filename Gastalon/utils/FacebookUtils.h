@@ -2,7 +2,7 @@
 //  FacebookUtils.h
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 5/11/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -16,4 +16,5 @@
 
 +(void)login;
 +(UIImage*)retrieveProfileImage;
++(void)fetchTaggableFriedsWithToken:(NSString*)token;
 @end

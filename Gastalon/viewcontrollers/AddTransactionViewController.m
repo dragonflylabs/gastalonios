@@ -103,9 +103,9 @@
 
 SUBSCRIBE(EventTypedNumber){
     if(event.isCleaning){
-        _btnAmount.titleLabel.text = @"";
+        [_btnAmount setTitle:@"" forState:UIControlStateNormal];
     }else{
-        _btnAmount.titleLabel.text = event.number;
+        [_btnAmount setTitle:event.number forState:UIControlStateNormal];
     }
 }
 @end

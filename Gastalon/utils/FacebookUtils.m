@@ -2,7 +2,7 @@
 //  FacebookUtils.m
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 5/11/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -29,6 +29,7 @@ static UIImageView * profilePicture;
             PUBLISH(eventLogin);
         } else {
             if ([result.grantedPermissions containsObject:@"email"]) {
+                eventLogin.facebookToken = [result.token tokenString];
                 [self requestUserInformationWithEvent:eventLogin];
             }else{
                 eventLogin.error = [NSError new];
@@ -71,5 +72,20 @@ static UIImageView * profilePicture;
 
 +(UIImage*)retrieveProfileImage{
     return profilePicture.image;
+}
+
++(void)fetchTaggableFriedsWithToken:(NSString*)token{
+    EventFacebookFriends * event = [EventFacebookFriends new];
+    FBSDKGraphRequest * request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me/friends?limit=500"
+                                      parameters:@{ @"fields" : @"id,name,picture.width(100).height(100)"
+                                                    } tokenString:[[FBSDKAccessToken currentAccessToken] tokenString] version:@"v2.3" HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        if(error){
+            event.error = error;
+        }else{
+            event.friends = result[@"data"];
+        }
+        PUBLISH(event);
+    }];
 }
 @end

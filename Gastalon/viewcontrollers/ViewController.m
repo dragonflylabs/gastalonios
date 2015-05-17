@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "DLAlerts.h"
+#import "Alerts.h"
 #import "AppDelegate.h"
 #import <AFNetworking/AFNetworking.h>
 
@@ -102,28 +102,23 @@
     [UIView commitAnimations];
 }
 
--(BOOL)validHTTPStatus:(NSError*)error{
-    if(error){
-        int status = (int)[[[error userInfo] objectForKey:AFNetworkingOperationFailingURLResponseErrorKey] statusCode];
-        switch (status) {
-            case HTTP_ACCESS_DENIED:
-                [DLAlerts showErrorMessage:NSLocalizedString(@"Error_Credentials", nil)];
-                return NO;
-            case HTTP_BAD_REQUEST:
-                [DLAlerts showErrorMessage:NSLocalizedString(@"Error_Request", nil)];
-                return NO;
-            case HTTP_NOT_FOUND:
-                [DLAlerts showErrorMessage:NSLocalizedString(@"Error_404", nil)];
-                return NO;
-            case HTTP_TOKEN_INVALID:
-                [[[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Session_Expired", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Accept", nil) otherButtonTitles:nil, nil] show];
-                [((AppDelegate*)([UIApplication sharedApplication].delegate)) logout];
-                return NO;
-            default:
-                return YES;
-        }
-    }else{
-        return YES;
+-(BOOL)validHTTPStatus:(int)status{
+    switch (status) {
+        case HTTP_ACCESS_DENIED:
+            [Alerts showAlertMessage:NSLocalizedString(@"Error_Credentials", nil)];
+            return NO;
+        case HTTP_BAD_REQUEST:
+            [Alerts showAlertMessage:NSLocalizedString(@"Error_Request", nil)];
+            return NO;
+        case HTTP_NOT_FOUND:
+            [Alerts showAlertMessage:NSLocalizedString(@"Error_404", nil)];
+            return NO;
+        case HTTP_TOKEN_INVALID:
+            [[[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Session_Expired", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Accept", nil) otherButtonTitles:nil, nil] show];
+            [((AppDelegate*)([UIApplication sharedApplication].delegate)) logout];
+            return NO;
+        default:
+            return YES;
     }
 }
 @end

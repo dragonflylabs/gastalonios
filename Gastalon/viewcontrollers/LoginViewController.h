@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface LoginViewController : ViewController
+@interface LoginViewController : ViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIControl *btnFacebook;
 - (IBAction)onFacebookLoginClick:(id)sender;
 - (IBAction)onRegisterClick:(id)sender;

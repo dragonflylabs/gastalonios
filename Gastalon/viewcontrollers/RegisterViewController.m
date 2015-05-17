@@ -27,6 +27,7 @@
 @implementation RegisterViewController{
     BOOL isPhotoTaken;
     User * user;
+    BOOL isRegisteringFacebook;
 }
 
 #pragma mark LifeCycle
@@ -36,6 +37,7 @@
     [self design];
     isPhotoTaken = NO;
     user = [[User alloc] init];
+    isRegisteringFacebook = NO;
 }
 
 #pragma mark UI Events
@@ -46,7 +48,8 @@
 - (IBAction)onDoneClick:(id)sender {
     if([self valid]){
         if([DLUtils isConnected]){
-            [self login];
+            [Alerts showLoadingInView:self.view];
+            [self doRegister];
         }else{
             [Alerts showAlertMessage:NSLocalizedString(@"Error_Connection", nil)];
         }
@@ -56,6 +59,7 @@
 - (IBAction)onFacebookLoginClick:(id)sender {
     if([DLUtils isConnected]){
         [Alerts showLoadingInView:self.view];
+        isRegisteringFacebook = YES;
         [FacebookUtils login];
     }else{
         [Alerts showAlertMessage:NSLocalizedString(@"Error_Connection", nil)];   
@@ -68,17 +72,19 @@
 
 #pragma mark Logic
 
--(void)login{
+-(void)doRegister{
     DLApi * api = [DLApi sharedApi];
-    [Alerts showLoadingInView:self.view];
     NSMutableDictionary * request = [[NSMutableDictionary alloc] init];
     [request setObject:user.fullName forKey:@"fullName"];
     [request setObject:user.email forKey:@"email"];
     [request setObject:user.facebookID forKey:@"facebookId"];
     [request setObject:user.twitterID forKey:@"twitterId"];
-    if(![[_edtPassword cleanText] isEqualToString:@""]){
-        [request setObject:user.fullName forKey:@"fullName"];
+    if(!isRegisteringFacebook){
+        [request setObject:[_edtPassword cleanText] forKey:@"password"];
+    }else{
+        [request setObject:@"" forKey:@"password"];
     }
+    isRegisteringFacebook = NO;
     [api postObjectWithURLString:API_REGISTER
                        andObject:request];
 }
@@ -104,8 +110,8 @@ SUBSCRIBE(EventPhotoTaken){
 }
 
 SUBSCRIBE(EventLoginFacebook){
-    [Alerts hideAllLoadingsForView:self.view];
     if(event.error){
+        [Alerts hideAllLoadingsForView:self.view];
         [Alerts showAlertMessage:NSLocalizedString(@"Error_Facebook_Me_Request", nil)];
     }else{
         user.facebookID = event.facebookID;
@@ -113,7 +119,7 @@ SUBSCRIBE(EventLoginFacebook){
         _edtEmail.text = event.email;
         user.fullName = [_edtFullName cleanText];
         user.email = [_edtEmail cleanText];
-        [self login];
+        [self doRegister];
     }
 }
 
@@ -125,23 +131,25 @@ SUBSCRIBE(EventFacebookPictureDownloaded){
 
 SUBSCRIBE(DLEventApi){
     [Alerts hideAllLoadingsForView:self.view];
-    if([self validHTTPStatus:event.error]){
+    if(!event.error){
         LoginModel * login = [Parser parseJSONWithResponse:event.response andClass:[LoginModel class]];
-        if(login.status == GASTALON_USER_INACTIVE){
-            user.token = login.token;
-            [RealmFactory insertOrUpdateUser:user];
-            [self dismissViewControllerAnimated:YES completion:^{
-                [Alerts showSuccessMessage:NSLocalizedString(@"Confirm_Email", nil)];
-            }];
-        }else if(login.status == GASTALON_USER_EXISTS){
-            [Alerts showAlertMessage:NSLocalizedString(@"User_Exists", nil)];
-        }else if(login.status == GASTALON_USER_ACTIVE){
-            user.token = login.token;
-            [RealmFactory insertOrUpdateUser:user];
-            [self dismissViewControllerAnimated:YES completion:^{
-                [Alerts showSuccessMessage:@"Login"];
-            }];
+        if([self validHTTPStatus:login.status]){
+            if(login.status == GASTALON_USER_INACTIVE){
+                [self dismissViewControllerAnimated:YES completion:^{
+                    [Alerts showSuccessMessage:NSLocalizedString(@"Confirm_Email", nil)];
+                }];
+            }else if(login.status == GASTALON_USER_EXISTS){
+                [Alerts showAlertMessage:NSLocalizedString(@"User_Exists", nil)];
+            }else if(login.status == GASTALON_USER_ACTIVE){
+                user.token = login.token;
+                [RealmFactory insertOrUpdateUser:user];
+                [self dismissViewControllerAnimated:YES completion:^{
+                    PUBLISH([EventRegisteredUser new]);
+                }];
+            }
         }
+    }else{
+        [Alerts showAlertMessage:NSLocalizedString(@"Server_Error", nil)];
     }
 }
 

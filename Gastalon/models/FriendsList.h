@@ -1,5 +1,5 @@
 //
-//  Parser.h
+//  FriendsList.h
 //  Gastalon
 //
 //  Created by Daniel García Alvarado on 5/17/15.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-@interface Parser : NSObject
-+(id)parseJSONWithResponse:(id)response andClass:(Class)clss;
+@interface FriendsList : NSObject
+@property(nonatomic, strong) NSMutableArray * friends;
 @end

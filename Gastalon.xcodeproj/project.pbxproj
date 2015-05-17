@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		714B2431E5FAB19D49DEB3AC /* libPods-GastalonTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ECB99C73471D4D1C0A379 /* libPods-GastalonTests.a */; };
 		8C9DBFD0C9CC06283D47BC1A /* libPods-Gastalon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D63A4CAF79AB0081FFC6F5C7 /* libPods-Gastalon.a */; };
+		95052AD41B090B8E00619D9A /* FriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 95052AD31B090B8E00619D9A /* FriendsList.m */; };
 		9509A1E51AE0C65B008D2FDE /* Frecuency.m in Sources */ = {isa = PBXBuildFile; fileRef = 9509A1E41AE0C65B008D2FDE /* Frecuency.m */; };
 		9509A1E81AE0D522008D2FDE /* CellCollectionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9509A1E71AE0D522008D2FDE /* CellCollectionCategory.m */; };
 		950D03F11AC7C971002D9395 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D03F01AC7C971002D9395 /* ProfileView.m */; };
@@ -131,6 +132,8 @@
 /* Begin PBXFileReference section */
 		019A7F11295CC87AD7A6F13C /* Pods-GastalonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GastalonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GastalonTests/Pods-GastalonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7873E72CD3FE690ECB4F3EC4 /* Pods-Gastalon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gastalon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gastalon/Pods-Gastalon.debug.xcconfig"; sourceTree = "<group>"; };
+		95052AD21B090B8E00619D9A /* FriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsList.h; path = Gastalon/models/FriendsList.h; sourceTree = "<group>"; };
+		95052AD31B090B8E00619D9A /* FriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsList.m; path = Gastalon/models/FriendsList.m; sourceTree = "<group>"; };
 		9509A1E31AE0C65B008D2FDE /* Frecuency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frecuency.h; path = Gastalon/models/Frecuency.h; sourceTree = "<group>"; };
 		9509A1E41AE0C65B008D2FDE /* Frecuency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Frecuency.m; path = Gastalon/models/Frecuency.m; sourceTree = "<group>"; };
 		9509A1E61AE0D522008D2FDE /* CellCollectionCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellCollectionCategory.h; path = Gastalon/cells/CellCollectionCategory.h; sourceTree = "<group>"; };
@@ -767,6 +770,8 @@
 				9509A1E41AE0C65B008D2FDE /* Frecuency.m */,
 				9557EA8C1AF88F9900BCC9DE /* User.h */,
 				9557EA8D1AF88F9900BCC9DE /* User.m */,
+				95052AD21B090B8E00619D9A /* FriendsList.h */,
+				95052AD31B090B8E00619D9A /* FriendsList.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1025,6 +1030,7 @@
 				9567F2911AC695DF00B08750 /* AccountsDataSource.m in Sources */,
 				B7EB06E11AB552C8009FAF5F /* CellTransactionAddSharedAccount.m in Sources */,
 				9557EA951AF89A4800BCC9DE /* CellAccount.m in Sources */,
+				95052AD41B090B8E00619D9A /* FriendsList.m in Sources */,
 				B7F0681C1AC52BEB007E74A0 /* CellTransactionAlarmPayGroupal.m in Sources */,
 				95D255201ADA51B500757295 /* AlarmServerExpense.m in Sources */,
 				B7F068311AC52D4E007E74A0 /* CellTransactionYouAddedFriendsToAccount.m in Sources */,
@@ -1217,7 +1223,6 @@
 					"-l\"Pods-Gastalon-EARestrictedScrollView\"",
 					"-l\"Pods-Gastalon-FSCalendar\"",
 					"-l\"Pods-Gastalon-Facebook-iOS-SDK\"",
-					"-l\"Pods-Gastalon-JTCalendar\"",
 					"-l\"Pods-Gastalon-NSDate+TimeAgo\"",
 					"-l\"Pods-Gastalon-Realm\"",
 					"-l\"Pods-Gastalon-SMPageControl\"",
@@ -1283,7 +1288,6 @@
 					"-l\"Pods-Gastalon-EARestrictedScrollView\"",
 					"-l\"Pods-Gastalon-FSCalendar\"",
 					"-l\"Pods-Gastalon-Facebook-iOS-SDK\"",
-					"-l\"Pods-Gastalon-JTCalendar\"",
 					"-l\"Pods-Gastalon-NSDate+TimeAgo\"",
 					"-l\"Pods-Gastalon-Realm\"",
 					"-l\"Pods-Gastalon-SMPageControl\"",

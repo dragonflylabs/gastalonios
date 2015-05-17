@@ -15,6 +15,7 @@
 #import "AlarmServerIncome.h"
 #define kTableViewCellHeight 100.0
 #import "Colors.h"
+#import "DLEvents.h"
 
 @implementation HomeTabViewController{
     NSArray * items;
@@ -26,6 +27,7 @@
     [super viewDidLoad];
     [self designView];
     transactions = [[NSMutableArray alloc] init];
+    [self registerDevice];
     /*
     Account * account = [[Account alloc] initWithIdUser:1 andType:TRANSACTION_ADD_ACCOUNT andName:@"Home" andCoverPhoto:nil andOwnerID:1 isShared:NO andBalance:100.0];
     [transactions addObject:account];
@@ -58,6 +60,12 @@
 }
 
 
+-(void)registerDevice{
+    User * user = [UserUtilities sharedInstance];
+    DLApi * api = [[DLApi sharedApi] withHeaders:@{@"Authorization": [@"Token %@" stringByAppendingString:[UserUtilities decodeUser]]}];
+    [api postObjectWithURLString:API_UPDATE_DEVICE andObject:@{@"deviceId" : user.deviceToken, @"deviceType" : @"2", @"email" : user.email}];
+}
+
 -(void)designView{
     float size = ((UIControl*)[_actionButtons objectAtIndex:0]).frame.size.height / 2;
     UIColor* color = [UIColor whiteColor];
@@ -89,5 +97,13 @@ SUBSCRIBE(EventTransactionAdded){
 
 - (IBAction)onAddIncomeClick:(id)sender {
     [self showModalControllerWithIdentifier:@"ADDTRANSACTIONCONTROLLER"];
+}
+
+SUBSCRIBE(DLEventApi){
+    NSLog(@"%@", event.response);
+}
+
+SUBSCRIBE(EventTokenReceived){
+    [self registerDevice];
 }
 @end

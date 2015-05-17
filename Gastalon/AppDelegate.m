@@ -15,6 +15,8 @@
 #import "Statics.h"
 #import "DLStatics.h"
 #import "TestViewController.h"
+#import "UserUtilities.h"
+#import "EventsApi.h"
 
 @interface AppDelegate ()
 
@@ -22,19 +24,16 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self design];
+    [self setupApplication:application];
     [Fabric with:@[TwitterKit]];
-    
-    /*TestViewController *viewController = [[TestViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
-    */
+    User * user = [UserUtilities sharedInstance];
+    if(!user){
+        [self logout];
+    }else{
+        [self enter];
+    }
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                            didFinishLaunchingWithOptions:launchOptions];
 }
@@ -47,6 +46,21 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    User * user = [UserUtilities sharedInstance];
+    if(user){
+        user.deviceToken = token;
+        [UserUtilities insertOrUpdateUser:user];
+        PUBLISH([EventTokenReceived new]);
+    }
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error{
+    NSLog(@"Failed to get token, error: %@", error);
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -78,8 +92,27 @@
                                                            [UIFont fontWithName:GASTALON_FONT_NAME_LIGHT size:20.0], NSFontAttributeName, nil]];
 }
 
+-(void)setupApplication:(UIApplication*)application{
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [application registerForRemoteNotifications];
+    }
+    else
+    {
+        [application registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
+}
+
 -(void)logout{
-    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LOGINCONTROLLER"];
+    [UserUtilities eraseUser];
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LOGINNAVIGATIONCONTROLLER"];
+    [self.window makeKeyAndVisible];
+}
+
+-(void)enter{
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MAINNAVIGATIONCONTROLLER"];
     [self.window makeKeyAndVisible];
 }
 @end

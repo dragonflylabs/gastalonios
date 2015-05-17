@@ -2,7 +2,7 @@
 //  NumericViewController.m
 //  Gastalon
 //
-//  Created by Daniel García Alvarado on 5/3/15.
+//  Created by Daniel García Alvarado on 5/17/15.
 //  Copyright (c) 2015 Dragonfly Labs. All rights reserved.
 //
 
@@ -34,7 +34,7 @@
 - (IBAction)onNumberClick:(id)sender {
     NSString * charNumber = ((UIButton*)sender).titleLabel.text;
     EventTypedNumber * event = [EventTypedNumber new];
-    if([charNumber isEqualToString:@""]){
+    if(!charNumber){
         event.isCleaning = YES;
         number = @"";
         event.number = number;

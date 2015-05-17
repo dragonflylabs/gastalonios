@@ -16,5 +16,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UINavigationController *navigationController;
 -(void)logout;
+-(void)enter;
 @end
 

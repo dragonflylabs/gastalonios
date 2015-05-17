@@ -27,6 +27,9 @@
                                         <color key="textColor" red="0.074509803920000006" green="0.39607843139999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="K3q-t6-bEz" id="hOg-Xo-TaE"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,6 +44,9 @@
                                         <color key="textColor" red="0.074509803920000006" green="0.39607843139999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="K3q-t6-bEz" id="w0S-cc-X7y"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2767,7 +2773,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="onAddFriendsClick:" destination="avP-le-rl9" eventType="touchUpInside" id="M8K-Yr-gK9"/>
+                                            <action selector="onAddFriendsClick:" destination="avP-le-rl9" eventType="touchUpInside" id="gMO-TY-BM7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2777,6 +2783,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Account" id="X1q-Tg-Wxq"/>
+                    <connections>
+                        <outlet property="edtAccountBalance" destination="AMV-82-MpS" id="lYb-nP-3Vp"/>
+                        <outlet property="edtAccountName" destination="BqW-U0-igB" id="nRS-6T-Ry4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkn-NV-sjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
